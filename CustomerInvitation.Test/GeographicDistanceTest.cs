@@ -9,7 +9,7 @@ namespace CustomerInvitation.Test
         private GeographicDistance geographicDistance;
 
         [Fact]
-        public void Should_CalculateNoDistance_When_CoordenatesAreTheSame() {
+        public void Should_CalculateZero_When_CoordenatesAreTheSame() {
             geographicDistance = new GeographicDistance();
 
             GeographicCoordinates destination = new GeographicCoordinates() {
