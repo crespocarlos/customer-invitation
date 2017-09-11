@@ -39,7 +39,7 @@ namespace CustomerInvitation.Service
             List<Customer> customersToInvite = this.GetCustomersToInviteWithinDistance(jsonFilePath, maxDistance);
             foreach (var customer in customersToInvite)
             {
-                Console.WriteLine($"{customer.Name} {customer.Id}");
+                Console.WriteLine($"{customer.Id} {customer.Name}");
             }
         }
 
@@ -49,7 +49,6 @@ namespace CustomerInvitation.Service
         /// <param name="jsonFilePath">json file containing the customers data</param>
         /// <param name="maxDistance">max distance within office location which someone can be invited</param>
         /// <returns>List of customers to be invited</returns>
-
         public List<Customer> GetCustomersToInviteWithinDistance(string jsonFilePath, int maxDistance)
         {
             List<Customer> customersWithinDistance = new List<Customer>();

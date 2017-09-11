@@ -129,7 +129,7 @@ namespace CustomerInvitation.Test {
 
                 invitation.ListCustomersToInviteWithinDistance(It.IsAny<string>(), 100);
 
-                string expected = "David Behan 1\nEoin Ahearn 8\nChristina McArdle 12\nLisa Ahearn 39\n";
+                string expected = "1 David Behan\n8 Eoin Ahearn\n12 Christina McArdle\n39 Lisa Ahearn\n";
 
                 Assert.Equal(expected, sw.ToString());
             }

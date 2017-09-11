@@ -7,13 +7,13 @@ using System;
 
 namespace CustomerInvitation
 {
-    /// <summary>
-    /// Parses the json file content and deserializes into an object
-    /// </summary>
-    /// <param name="path">json file path</param>
-    /// <returns>List of T</returns>
     public class FileReader : IFileReader
     {
+        /// <summary>
+        /// Parses the json file content and deserializes into an object
+        /// </summary>
+        /// <param name="path">json file path</param>
+        /// <returns>List of T</returns>
         public List<T> ParseJsonFile<T>(string path) {
             List<T> customers = new List<T>();
 
@@ -25,7 +25,7 @@ namespace CustomerInvitation
                 string line = string.Empty;
                 while ((line = myReader.ReadLine()) != null) {
                     T customer = JsonConvert.DeserializeObject<T>(line);
-                    customers.Add (customer);
+                    customers.Add(customer);
                 }
             }
 
