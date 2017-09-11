@@ -22,9 +22,9 @@ namespace CustomerInvitation
         static void Main(string[] args)
         {
             var provider = InitializeDIContainer();
-            var party = provider.GetService<IInvitation>();
+            var invitation = provider.GetService<IInvitation>();
             
-            party.ListCustomersToInviteWithinDistance("./Resource/customerList.json", 100);
+            invitation.ListCustomersToInviteWithinDistance("./Resource/customerList.json", 100);
         }
 
         
